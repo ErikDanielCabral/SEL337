@@ -1,0 +1,14 @@
+[Unit]
+Description=LED Blink Service
+After=multi-user.target
+
+[Service]
+Type=simple
+User=sel
+ExecStart=/usr/bin/python /home/sel/pi/blink.py
+#ExecStop=/usr/bin/python /home/sel/pi/cleanup.py
+Restart=on-failure
+WorkingDirectory=/home/sel/pi
+
+[Install]
+WantedBy=multi-user.target
