@@ -1,6 +1,6 @@
-Funcionamento do projeto - Resumo: O intuito é utilizar uma unidade de serviço personalizada (blink_9703.service) para iniciar automaticamente um programa simples em python (blink.py) capaz de piscar um LED, conforme a inicialização (boot) do sistema operacional instalado em uma RaspberryPi.  
+**Funcionamento do projeto - Resumo:** O intuito é utilizar uma unidade de serviço personalizada (blink_9703.service) para iniciar automaticamente um programa simples em python (blink.py) capaz de piscar um LED, conforme a inicialização (boot) do sistema operacional instalado em uma RaspberryPi.  
 
-"Boot" da RaspberryPi: Resumido nas quatros etapas abaixo, o processo todo demora poucos segundos.
+**"Boot" da RaspberryPi:** Resumido nas quatros etapas abaixo, o processo todo demora poucos segundos.
   1.Bootloader:
     A Raspberry Pi inicia carregando um bootloader primário armazenado na memória ROM. Este bootloader localiza e carrega o segundo estágio do boot a partir do cartão SD.
 
@@ -13,7 +13,7 @@ Funcionamento do projeto - Resumo: O intuito é utilizar uma unidade de serviço
   4.Init System: 
   Após o kernel ser carregado, o sistema inicia o processo init, responsável por configurar e gerenciar os serviços e processos necessários para o funcionamento do sistema operacional.
 
-Init System e systemd: Existem vários sistemas de init disponíveis, mas o mais comum nas distribuições Linux modernas, incluindo as utilizadas pela Raspberry Pi, é o systemd.  Este, que por sua vez, é um sistema de inicialização moderno e eficiente, usado para gerenciar serviços no Linux. Suas principais características seguem listadas.
+**Init System e systemd:** Existem vários sistemas de init disponíveis, mas o mais comum nas distribuições Linux modernas, incluindo as utilizadas pela Raspberry Pi, é o systemd.  Este, que por sua vez, é um sistema de inicialização moderno e eficiente, usado para gerenciar serviços no Linux. Suas principais características seguem listadas.
 
   1.Gerenciamento de Serviços: Usa arquivos .service para definir como e quando um programa ou serviço deve ser iniciado.
 
@@ -23,9 +23,9 @@ Init System e systemd: Existem vários sistemas de init disponíveis, mas o mais
 
   4.Facilidade de Configuração: Arquivos .service são simples de criar e configurar.
 
-Video demonstrativo: https://drive.google.com/file/d/1o-oIDu36a_8VTKZhXwdbr--EnUdmUie5/view?usp=sharing
+**Video demonstrativo:** https://drive.google.com/file/d/1o-oIDu36a_8VTKZhXwdbr--EnUdmUie5/view?usp=sharing
 
-Códigos comentados - blink.py
+**Códigos comentados - blink.py**
 
 from gpiozero import LED  # Importa a classe LED da biblioteca gpiozero, que facilita o controle de GPIOs na Raspberry Pi.
 from time import sleep    # Importa a função sleep, usada para criar pausas entre as ações.
@@ -41,7 +41,7 @@ while True:               # Inicia um loop infinito que será executado continua
     print("LED apagado")  # Imprime no terminal que o LED está apagado.
     sleep(1)              # Aguarda por 1 segundo antes de reiniciar o loop.
 
-Códigos comentados - blink_9703.service
+**Códigos comentados - blink_9703.service**
 
 [Unit]
 Description=LED Blink Service          # Uma descrição para o serviço, que aparecerá ao listar os serviços.
