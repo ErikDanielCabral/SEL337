@@ -1,0 +1,5 @@
+commit ee10edbc68a76c31556662011e5ba8a9b3530c43
+Author: erikdanielcabral <therik@usp.br>
+Date:   Mon Nov 25 21:40:32 2024 -0300
+
+    Python e Service do projeto
