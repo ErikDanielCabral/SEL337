@@ -45,10 +45,12 @@
 **Códigos comentados - blink_9703.service**
 
 *[Unit]*
+
 *Description=LED Blink Service*          # Uma descrição para o serviço, que aparecerá ao listar os serviços.
 *After=multi-user.target*                # Define que o serviço será iniciado apenas depois que o sistema alcançar o estado "multi-user",
 
 *[Service]*
+
 *Type=simple*                            # Define que o serviço será considerado ativo enquanto o comando especificado no ExecStart *estiver em execução.*
 *User=sel*                               # Define o usuário que executará o serviço. Neste caso, o usuário é "sel".
 *ExecStart=/usr/bin/python /home/sel/pi/blink.py* #Utiliza o python para rodar o scrpit com esse nome neste diretório
@@ -59,6 +61,7 @@
 *WorkingDirectory=/home/sel/pi*          # Define o diretório de trabalho para o serviço.
 
 *[Install]*
+
 *WantedBy=multi-user.target*             # Indica que este serviço será iniciado no nível de execução "multi-user",
                                     
 
