@@ -1,6 +1,7 @@
 **Funcionamento do projeto - Resumo:** O intuito é utilizar uma unidade de serviço personalizada (blink_9703.service) para iniciar automaticamente um programa simples em python (blink.py) capaz de piscar um LED, conforme a inicialização (boot) do sistema operacional instalado em uma RaspberryPi.  
 
 **"Boot" da RaspberryPi:** Resumido nas quatros etapas abaixo, o processo todo demora poucos segundos.
+
   1.Bootloader:
     A Raspberry Pi inicia carregando um bootloader primário armazenado na memória ROM. Este bootloader localiza e carrega o segundo estágio do boot a partir do cartão SD.
 
